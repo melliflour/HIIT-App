@@ -8,11 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DetailsViewController: UIViewController {
+  
+  var workout: workoutClass!
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    title = workout.title
   }
 
 
