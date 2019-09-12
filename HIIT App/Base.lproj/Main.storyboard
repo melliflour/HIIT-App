@@ -58,11 +58,44 @@
                     <view key="view" contentMode="scaleToFill" id="W5m-S5-Dzm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-K3-x10">
+                                <rect key="frame" x="126.5" y="158" width="161" height="52.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ft-9Vh">
+                                <rect key="frame" x="131.5" y="228.5" width="151.5" height="81.5"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-pK-yNh">
+                                <rect key="frame" x="144.5" y="767" width="125" height="77"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="55"/>
+                                <state key="normal" title="STOP">
+                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YkM-rO-EV8" kind="unwind" identifier="unwindStop" unwindAction="backToHomeWith:" id="yPy-MP-5fV"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="c2g-pK-yNh" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="1Jv-Re-RsD"/>
+                            <constraint firstItem="ruE-K3-x10" firstAttribute="top" secondItem="Fbx-2I-Ue7" secondAttribute="top" constant="18" id="7df-lG-Psd"/>
+                            <constraint firstItem="Fbx-2I-Ue7" firstAttribute="bottom" secondItem="c2g-pK-yNh" secondAttribute="bottom" constant="18" id="Mo7-jg-67T"/>
+                            <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="NpD-NW-UTh"/>
+                            <constraint firstItem="hyw-ft-9Vh" firstAttribute="top" secondItem="ruE-K3-x10" secondAttribute="bottom" constant="18" id="k2e-Q2-jF0"/>
+                            <constraint firstItem="hyw-ft-9Vh" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="lo0-Yq-6Cp"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Fbx-2I-Ue7"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-Kf-NHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="YkM-rO-EV8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1676" y="-640"/>
         </scene>
@@ -75,8 +108,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8s-8h-idU">
-                                <rect key="frame" x="167" y="547" width="80" height="28"/>
-                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="20"/>
+                                <rect key="frame" x="159.5" y="547" width="95.5" height="28"/>
+                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
