@@ -60,8 +60,8 @@ class HomeTableViewController: UITableViewController {
   ]
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if segue.identifier == "showWorkoutDetail" {
-      if let destVC = segue.destination as? DetailsViewController {
+    if segue.identifier == "showExercises" {
+      if let destVC = segue.destination as? ExercisesTableViewController {
         if let indexPath = tableView.indexPathForSelectedRow {
           destVC.workout = workouts[indexPath.row]
         }

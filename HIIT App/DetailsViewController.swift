@@ -10,11 +10,14 @@ import UIKit
 
 class DetailsViewController: UIViewController {
   
-  var workout: workoutClass!
-
+  var exercise: exerciseClass!
+  
+  @IBOutlet weak var descriptionLabel: UILabel!
+  
   override func viewDidLoad() {
     super.viewDidLoad()
-    title = workout.title
+    title = exercise.name
+    descriptionLabel.text = exercise.description
   }
 
 
