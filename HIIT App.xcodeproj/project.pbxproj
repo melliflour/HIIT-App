@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DC03AF7B2359986F00F46EF2 /* FinishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03AF7A2359986F00F46EF2 /* FinishViewController.swift */; };
 		DC1D0572232892F0002A8DED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D0571232892F0002A8DED /* AppDelegate.swift */; };
 		DC1D0574232892F0002A8DED /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D0573232892F0002A8DED /* DetailsViewController.swift */; };
 		DC1D0577232892F0002A8DED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC1D0575232892F0002A8DED /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DC03AF7A2359986F00F46EF2 /* FinishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishViewController.swift; sourceTree = "<group>"; };
 		DC1D056E232892F0002A8DED /* HIIT App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HIIT App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC1D0571232892F0002A8DED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC1D0573232892F0002A8DED /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				DC1D0571232892F0002A8DED /* AppDelegate.swift */,
 				DC1D0573232892F0002A8DED /* DetailsViewController.swift */,
 				DC1D0575232892F0002A8DED /* Main.storyboard */,
+				DC03AF7A2359986F00F46EF2 /* FinishViewController.swift */,
 				DC1D05872329F38B002A8DED /* StartExerciseViewController.swift */,
 				DC1D05852329E4DB002A8DED /* ExercisesTableViewController.swift */,
 				DC1D05832328ABFC002A8DED /* HomeTableViewController.swift */,
@@ -149,6 +152,7 @@
 				DC1D0574232892F0002A8DED /* DetailsViewController.swift in Sources */,
 				DC1D0572232892F0002A8DED /* AppDelegate.swift in Sources */,
 				DC1D05862329E4DB002A8DED /* ExercisesTableViewController.swift in Sources */,
+				DC03AF7B2359986F00F46EF2 /* FinishViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

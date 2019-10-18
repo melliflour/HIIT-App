@@ -10,14 +10,54 @@ import UIKit
 
 class StartExerciseViewController: UIViewController {
   
+  @IBOutlet weak var timeLabel: UILabel!
+  
+  @IBOutlet weak var questionView: UIView!
+  
+  @IBOutlet weak var exerciseView: UIView!
+  
   var workout: workoutClass!
+  var seconds = 0
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = workout.title
-    }
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    title = workout.title
+  }
     
+  override func viewDidAppear(_ animated: Bool) {
+    exerciseView.isHidden = false
+    questionView.isHidden = true
+    
+    seconds = 2
+    updateTimeLabel()
+    makeTimer()
+  }
+  
+  func makeTimer() {
+    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
+      if self.seconds > 0 {
+        self.seconds -= 1
+        self.updateTimeLabel()
+      } else {
+        timer.invalidate()
+        self.exerciseView.isHidden = true
+        self.questionView.isHidden = false
+        self.completeWorkout()
+        
+      }
+    }
+  }
 
+  func completeWorkout() {
+    let secondViewController = storyboard?.instantiateViewController(withIdentifier: "finishVC") as! FinishViewController
+    self.navigationController?.pushViewController(secondViewController, animated: true)
+
+  }
+  
+  func updateTimeLabel() {
+    timeLabel.text = "\(seconds)s"
+  }
+  
     /*
     // MARK: - Navigation
 

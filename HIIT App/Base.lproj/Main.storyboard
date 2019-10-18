@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p9P-xq-8ex">
-    <device id="retina6_1" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="p9P-xq-8ex">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +18,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="workoutCell" textLabel="3Qr-uR-NZl" style="IBUITableViewCellStyleDefault" id="Oea-9u-J9F">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oea-9u-J9F" id="99C-cR-piN">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -59,45 +57,90 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-K3-x10">
-                                <rect key="frame" x="126.5" y="158" width="161" height="52.5"/>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ft-9Vh">
-                                <rect key="frame" x="131.5" y="228.5" width="151.5" height="81.5"/>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c2g-pK-yNh">
-                                <rect key="frame" x="144.5" y="767" width="125" height="77"/>
-                                <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="55"/>
-                                <state key="normal" title="STOP">
-                                    <color key="titleColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="YkM-rO-EV8" kind="unwind" identifier="unwindStop" unwindAction="backToHomeWith:" id="yPy-MP-5fV"/>
-                                </connections>
-                            </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vIy-KS-9SO" userLabel="QuestionView">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-AA-jRt" userLabel="ExerciseView">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-K3-x10">
+                                        <rect key="frame" x="126.5" y="0.0" width="161" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ft-9Vh">
+                                        <rect key="frame" x="198.5" y="70.5" width="17" height="81.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="hyw-ft-9Vh" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="Osp-tF-oLD"/>
+                                    <constraint firstItem="hyw-ft-9Vh" firstAttribute="top" secondItem="ruE-K3-x10" secondAttribute="bottom" constant="18" id="mak-Eb-GQQ"/>
+                                    <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="rbl-ft-CgL"/>
+                                    <constraint firstItem="ruE-K3-x10" firstAttribute="top" secondItem="ZU2-AA-jRt" secondAttribute="top" id="w4i-qN-jvM"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="c2g-pK-yNh" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="1Jv-Re-RsD"/>
-                            <constraint firstItem="ruE-K3-x10" firstAttribute="top" secondItem="Fbx-2I-Ue7" secondAttribute="top" constant="18" id="7df-lG-Psd"/>
-                            <constraint firstItem="Fbx-2I-Ue7" firstAttribute="bottom" secondItem="c2g-pK-yNh" secondAttribute="bottom" constant="18" id="Mo7-jg-67T"/>
-                            <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="NpD-NW-UTh"/>
-                            <constraint firstItem="hyw-ft-9Vh" firstAttribute="top" secondItem="ruE-K3-x10" secondAttribute="bottom" constant="18" id="k2e-Q2-jF0"/>
-                            <constraint firstItem="hyw-ft-9Vh" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="lo0-Yq-6Cp"/>
+                            <constraint firstItem="ZU2-AA-jRt" firstAttribute="centerX" secondItem="W5m-S5-Dzm" secondAttribute="centerX" id="5VG-zK-VXb"/>
+                            <constraint firstItem="Fbx-2I-Ue7" firstAttribute="bottom" secondItem="ZU2-AA-jRt" secondAttribute="bottom" id="DyY-AG-B7Z"/>
+                            <constraint firstItem="ZU2-AA-jRt" firstAttribute="leading" secondItem="Fbx-2I-Ue7" secondAttribute="leading" id="RY0-5x-rhO"/>
+                            <constraint firstItem="ZU2-AA-jRt" firstAttribute="top" secondItem="Fbx-2I-Ue7" secondAttribute="top" id="szH-YN-qgp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Fbx-2I-Ue7"/>
                     </view>
+                    <connections>
+                        <outlet property="exerciseView" destination="ZU2-AA-jRt" id="3j1-pH-v0l"/>
+                        <outlet property="questionView" destination="vIy-KS-9SO" id="P2h-mS-yM3"/>
+                        <outlet property="timeLabel" destination="hyw-ft-9Vh" id="Q0c-21-4fb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-Kf-NHV" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="YkM-rO-EV8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1676" y="-640"/>
+        </scene>
+        <!--Finish View Controller-->
+        <scene sceneID="36V-2y-mCT">
+            <objects>
+                <viewController storyboardIdentifier="finishVC" id="qdW-aP-6N0" customClass="FinishViewController" customModule="HIIT_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7iz-Ns-R7F">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="DONE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3U-bk-iT8">
+                                <rect key="frame" x="186" y="354" width="47" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="llr-V8-H1J">
+                                <rect key="frame" x="115.5" y="431" width="183" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Return to Homescreen"/>
+                                <connections>
+                                    <action selector="returnHome:" destination="qdW-aP-6N0" eventType="touchUpInside" id="1Hi-P5-jdT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="llr-V8-H1J" firstAttribute="centerY" secondItem="7iz-Ns-R7F" secondAttribute="centerY" id="2xF-aC-evS"/>
+                            <constraint firstItem="llr-V8-H1J" firstAttribute="centerX" secondItem="7iz-Ns-R7F" secondAttribute="centerX" id="am0-z3-w3y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="A4J-gV-qTK"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fxq-xX-LpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2453" y="-644"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -107,8 +150,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8s-8h-idU">
-                                <rect key="frame" x="159.5" y="547" width="95.5" height="28"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8s-8h-idU">
+                                <rect key="frame" x="20" y="547" width="374" height="23.5"/>
                                 <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -116,7 +159,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Z8s-8h-idU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="QWK-vO-Kt4"/>
+                            <constraint firstItem="Z8s-8h-idU" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="407" id="Tq1-r1-kM0"/>
                             <constraint firstItem="Z8s-8h-idU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Xp6-zO-muN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Z8s-8h-idU" secondAttribute="trailing" constant="20" id="ttD-nw-XqU"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -128,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1675" y="19"/>
+            <point key="canvasLocation" x="1673.913043478261" y="18.75"/>
         </scene>
         <!--Exercises Table View Controller-->
         <scene sceneID="ckB-Zt-Akl">
@@ -140,7 +186,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="exerciseCell" textLabel="9Ud-5c-eTr" style="IBUITableViewCellStyleDefault" id="H8T-jW-uVf">
-                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H8T-jW-uVf" id="h68-RF-Cti">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
