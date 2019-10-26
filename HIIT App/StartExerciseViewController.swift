@@ -13,9 +13,7 @@ class StartExerciseViewController: UIViewController {
   var answerArray: [String] = []
   
   var option = ""
-  
-  @IBOutlet weak var questionTimeLabel: UILabel!
-  
+    
   @IBAction func choseOptionD(_ sender: Any) {
     option = "d"
     submitAnswer()
@@ -107,6 +105,7 @@ class StartExerciseViewController: UIViewController {
   
   func createAnswerArray() {
     answerArray = Array(questions.keys)
+    answerArray.shuffle()
     print(answerArray)
   }
   
@@ -163,23 +162,6 @@ class StartExerciseViewController: UIViewController {
       }
     }
   }
-  
-  func makeTimerForQuestion() {
-    seconds = 6
-    updateQuestionTimeLabel()
-    Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
-      if self.seconds > 0 {
-        self.seconds -= 1
-        self.updateQuestionTimeLabel()
-      } else {
-        timer.invalidate()
-        self.exerciseView.isHidden = false
-        self.questionView.isHidden = true
-        self.makeTimerForExercise()
-      }
-    }
-  }
-  
 
   func completeWorkout() {
     let secondViewController = storyboard?.instantiateViewController(withIdentifier: "finishVC") as! FinishViewController
@@ -189,10 +171,6 @@ class StartExerciseViewController: UIViewController {
   
   func updateTimeLabel() {
     timeLabel.text = "\(seconds)s"
-  }
-  
-  func updateQuestionTimeLabel() {
-    questionTimeLabel.text = "\(seconds)s"
   }
   
     /*

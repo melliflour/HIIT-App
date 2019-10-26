@@ -57,7 +57,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-AA-jRt" userLabel="ExerciseView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-AA-jRt" userLabel="ExerciseView">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ft-9Vh">
@@ -81,7 +81,7 @@
                                     <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="rbl-ft-CgL"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKk-2g-jS6">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKk-2g-jS6">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Euc-Tj-Jng">
@@ -90,14 +90,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvU-k1-m12">
-                                        <rect key="frame" x="198.5" y="79" width="17" height="81.5"/>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KVK-fP-hzt">
-                                        <rect key="frame" x="42" y="178.5" width="330.5" height="171"/>
+                                        <rect key="frame" x="16" y="85" width="382" height="171"/>
                                         <string key="text">Which musical term means "quickly"?
 1. Presto
 2. Adagio
@@ -107,16 +101,6 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt8-QX-iNq">
-                                        <rect key="frame" x="42" y="390" width="50" height="129"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
-                                        <state key="normal" title="a"/>
-                                        <connections>
-                                            <action selector="choseOptionA:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="09A-B9-AxD"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-Cs-eWw">
                                         <rect key="frame" x="235" y="390" width="45" height="129"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -147,18 +131,28 @@
                                             <action selector="choseOptionB:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="9g9-5J-qcR"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt8-QX-iNq">
+                                        <rect key="frame" x="38" y="390" width="50" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
+                                        <state key="normal" title="a"/>
+                                        <connections>
+                                            <action selector="choseOptionA:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="09A-B9-AxD"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
-                                    <constraint firstItem="rvU-k1-m12" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="1JD-RR-Fii"/>
+                                    <constraint firstAttribute="trailing" secondItem="KVK-fP-hzt" secondAttribute="trailing" constant="16" id="Cvs-Dh-Bk2"/>
                                     <constraint firstItem="KVK-fP-hzt" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="P1c-jc-xTW"/>
-                                    <constraint firstItem="rvU-k1-m12" firstAttribute="top" secondItem="Euc-Tj-Jng" secondAttribute="bottom" constant="18" id="WH1-OJ-YBD"/>
                                     <constraint firstItem="Euc-Tj-Jng" firstAttribute="top" secondItem="UKk-2g-jS6" secondAttribute="top" constant="8" id="Wb6-AI-CcH"/>
                                     <constraint firstItem="Euc-Tj-Jng" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="XNt-FY-aN5"/>
-                                    <constraint firstItem="KVK-fP-hzt" firstAttribute="top" secondItem="rvU-k1-m12" secondAttribute="bottom" constant="18" id="x05-1h-wfO"/>
+                                    <constraint firstItem="KVK-fP-hzt" firstAttribute="top" secondItem="Euc-Tj-Jng" secondAttribute="bottom" constant="24" id="d29-oR-Asy"/>
+                                    <constraint firstItem="KVK-fP-hzt" firstAttribute="leading" secondItem="UKk-2g-jS6" secondAttribute="leading" constant="16" id="gnt-Kp-6rT"/>
                                 </constraints>
                             </view>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WM-uR-Y8I">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5WM-uR-Y8I">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Correct answer" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m9s-xf-3KZ">
@@ -214,7 +208,6 @@
                         <outlet property="correctOrWrongLabel" destination="m9s-xf-3KZ" id="i5h-0G-rYw"/>
                         <outlet property="exerciseView" destination="ZU2-AA-jRt" id="3j1-pH-v0l"/>
                         <outlet property="questionLabel" destination="KVK-fP-hzt" id="UNh-vk-RBK"/>
-                        <outlet property="questionTimeLabel" destination="rvU-k1-m12" id="v58-uq-M1f"/>
                         <outlet property="questionView" destination="UKk-2g-jS6" id="9KE-ad-EeC"/>
                         <outlet property="timeLabel" destination="hyw-ft-9Vh" id="Q0c-21-4fb"/>
                     </connections>
