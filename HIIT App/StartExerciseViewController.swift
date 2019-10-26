@@ -76,7 +76,7 @@ class StartExerciseViewController: UIViewController {
   "What substance makes up the outer layer of a tooth? \n a. Calcium \n b. Collagen \n c. Enamel \n d. Phospholipid bilayer": "c",
   "Which hormone induces sleepiness? \n a. Adrenaline \n b. Melatonin \n c. Dopamine \n d. testosterone": "b",
   "Which organ contains humour? \n a. Legs \n b. Ears \n c. Nose \n d. Eyes": "d",
-  "Which country developed emojis? \n a. Japan /n b. USA /n c. Germany \n d. South Korea": "a",
+  "Which country developed emojis? \n a. Japan \n b. USA \n c. Germany \n d. South Korea": "a",
   "What is the medical term for long-sightedness? \n a. Hypotonia \n b. Hyperopia \n c. Amnesia \n d.insomnia": "b",
   "What is the collective noun for a group of owls? \n a. Parliament \n b. Murder \n c. Pack \n d. Flock": "a",
   "(0, 1, 2, 4, 6, 9, 12, 16, ?......) What number should replace the question mark? /n a. 18 \n b. 19 \n c. 20 \n d. 24": "c",
@@ -97,8 +97,8 @@ class StartExerciseViewController: UIViewController {
   "If everyone working at a car wash works at the same speed, and eight people can wash 50 cars in 60 hours, then four people can wash 100 cars in how many hours? \n a. 30 \n b. 60 \n c. 120 \n d. 240":"",
   "Peter is taller than Nancy and Dan is shorter than Peter. Which of the following can be proved true: \n a. Dan is taller than Nancy. \n b. Dan is shorter than Nancy. \n c. Dan is as tall as Nancy. \n d. None of the above can be proved true.":"d",
   "Together Harry and Sam caught 32 fish. Harry caught three times as many fish as Sam. How many fish did Harry catch? \n a. 6 \n b. 8 \n c. 16 \n d. 24":"d",
-  "If a+b = 7 and ab = 4,then find the value of (a×a) + (b×b). \n a. 50 /n b. 41 \n c. 46 /n d. 69":"b",
-  "The difference between the greatest and smallest two-digit even integers that are exactly divisible by 4 is: /n a. 82 \n b. 84 \n c.96 \n d. 88":"b",
+  "If a+b = 7 and ab = 4,then find the value of (a×a) + (b×b). \n a. 50 \n b. 41 \n c. 46 \n d. 69":"b",
+  "The difference between the greatest and smallest two-digit even integers that are exactly divisible by 4 is: \n a. 82 \n b. 84 \n c.96 \n d. 88":"b",
   "On a street there are 25 houses—10 of the houses have fewer than six rooms, 10 of the houses have more than seven rooms, and 4 houses have more than eight rooms. What is the total number of houses that are either six, seven, or eight rooms? \n a. 5 \n b. 9 \n c. 11 \n d. 14":"c"]
   
   @IBOutlet weak var questionLabel: UILabel!
