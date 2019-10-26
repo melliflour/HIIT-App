@@ -57,6 +57,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-AA-jRt" userLabel="ExerciseView">
+                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ft-9Vh">
+                                        <rect key="frame" x="198.5" y="78.5" width="17" height="81.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-K3-x10">
+                                        <rect key="frame" x="126.5" y="8" width="161" height="52.5"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ruE-K3-x10" firstAttribute="top" secondItem="ZU2-AA-jRt" secondAttribute="top" constant="8" id="7c6-sQ-3TL"/>
+                                    <constraint firstItem="hyw-ft-9Vh" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="Osp-tF-oLD"/>
+                                    <constraint firstItem="hyw-ft-9Vh" firstAttribute="top" secondItem="ruE-K3-x10" secondAttribute="bottom" constant="18" id="mak-Eb-GQQ"/>
+                                    <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="rbl-ft-CgL"/>
+                                </constraints>
+                            </view>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UKk-2g-jS6">
                                 <rect key="frame" x="0.0" y="140" width="414" height="722"/>
                                 <subviews>
@@ -83,31 +107,54 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Option number " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5f2-Iy-nGJ">
-                                        <rect key="frame" x="25" y="367.5" width="364.5" height="92"/>
-                                        <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="60"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu5-ZD-cJe">
-                                        <rect key="frame" x="89.5" y="477.5" width="235" height="77"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="65"/>
-                                        <state key="normal" title="Submit"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bt8-QX-iNq">
+                                        <rect key="frame" x="42" y="390" width="50" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
+                                        <state key="normal" title="a"/>
                                         <connections>
-                                            <action selector="submitAnswer:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="rtL-uu-jZg"/>
+                                            <action selector="choseOptionA:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="09A-B9-AxD"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-Cs-eWw">
+                                        <rect key="frame" x="235" y="390" width="45" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
+                                        <state key="normal" title="c"/>
+                                        <connections>
+                                            <action selector="choseOptionC:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="dR4-5p-IKy"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSg-oQ-uAA">
+                                        <rect key="frame" x="321" y="390" width="52" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
+                                        <state key="normal" title="d"/>
+                                        <connections>
+                                            <action selector="choseOptionD:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="ZFL-1Y-yBK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHI-Un-H4p">
+                                        <rect key="frame" x="134" y="390" width="52" height="129"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="100"/>
+                                        <state key="normal" title="b"/>
+                                        <connections>
+                                            <action selector="choseOptionB:" destination="IYQ-O9-1xc" eventType="touchUpInside" id="9g9-5J-qcR"/>
                                         </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="rvU-k1-m12" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="1JD-RR-Fii"/>
-                                    <constraint firstItem="5f2-Iy-nGJ" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="IDF-Pw-hUS"/>
-                                    <constraint firstItem="5f2-Iy-nGJ" firstAttribute="top" secondItem="KVK-fP-hzt" secondAttribute="bottom" constant="18" id="Ia3-PM-gtQ"/>
                                     <constraint firstItem="KVK-fP-hzt" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="P1c-jc-xTW"/>
-                                    <constraint firstItem="Zu5-ZD-cJe" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="PpR-Bg-uam"/>
                                     <constraint firstItem="rvU-k1-m12" firstAttribute="top" secondItem="Euc-Tj-Jng" secondAttribute="bottom" constant="18" id="WH1-OJ-YBD"/>
                                     <constraint firstItem="Euc-Tj-Jng" firstAttribute="top" secondItem="UKk-2g-jS6" secondAttribute="top" constant="8" id="Wb6-AI-CcH"/>
                                     <constraint firstItem="Euc-Tj-Jng" firstAttribute="centerX" secondItem="UKk-2g-jS6" secondAttribute="centerX" id="XNt-FY-aN5"/>
-                                    <constraint firstItem="Zu5-ZD-cJe" firstAttribute="top" secondItem="5f2-Iy-nGJ" secondAttribute="bottom" constant="18" id="p0w-9g-S8b"/>
                                     <constraint firstItem="KVK-fP-hzt" firstAttribute="top" secondItem="rvU-k1-m12" secondAttribute="bottom" constant="18" id="x05-1h-wfO"/>
                                 </constraints>
                             </view>
@@ -143,30 +190,6 @@
                                     <constraint firstItem="VtN-Jn-J7E" firstAttribute="centerX" secondItem="5WM-uR-Y8I" secondAttribute="centerX" id="yOD-ty-MKd"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZU2-AA-jRt" userLabel="ExerciseView">
-                                <rect key="frame" x="0.0" y="140" width="414" height="722"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hyw-ft-9Vh">
-                                        <rect key="frame" x="198.5" y="78.5" width="17" height="81.5"/>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="70"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exercise" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruE-K3-x10">
-                                        <rect key="frame" x="126.5" y="8" width="161" height="52.5"/>
-                                        <fontDescription key="fontDescription" name="DINAlternate-Bold" family="DIN Alternate" pointSize="45"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <constraints>
-                                    <constraint firstItem="ruE-K3-x10" firstAttribute="top" secondItem="ZU2-AA-jRt" secondAttribute="top" constant="8" id="7c6-sQ-3TL"/>
-                                    <constraint firstItem="hyw-ft-9Vh" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="Osp-tF-oLD"/>
-                                    <constraint firstItem="hyw-ft-9Vh" firstAttribute="top" secondItem="ruE-K3-x10" secondAttribute="bottom" constant="18" id="mak-Eb-GQQ"/>
-                                    <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="rbl-ft-CgL"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -186,11 +209,11 @@
                         <viewLayoutGuide key="safeArea" id="Fbx-2I-Ue7"/>
                     </view>
                     <connections>
-                        <outlet property="answerField" destination="5f2-Iy-nGJ" id="ZIC-Co-mPt"/>
                         <outlet property="answerView" destination="5WM-uR-Y8I" id="WB5-1b-QIt"/>
                         <outlet property="correctAnswerLabel" destination="VtN-Jn-J7E" id="Faq-gr-Scr"/>
                         <outlet property="correctOrWrongLabel" destination="m9s-xf-3KZ" id="i5h-0G-rYw"/>
                         <outlet property="exerciseView" destination="ZU2-AA-jRt" id="3j1-pH-v0l"/>
+                        <outlet property="questionLabel" destination="KVK-fP-hzt" id="UNh-vk-RBK"/>
                         <outlet property="questionTimeLabel" destination="rvU-k1-m12" id="v58-uq-M1f"/>
                         <outlet property="questionView" destination="UKk-2g-jS6" id="9KE-ad-EeC"/>
                         <outlet property="timeLabel" destination="hyw-ft-9Vh" id="Q0c-21-4fb"/>
