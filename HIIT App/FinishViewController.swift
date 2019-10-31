@@ -26,9 +26,9 @@ class FinishViewController: UIViewController {
     returnView.isHidden = true
     questionTextView.isHidden = false
     closeButton.isHidden = false
-    var questionLabelText = "\(answerArray[0])\n\n"
+    var questionLabelText = "\(answerArray[0])\n\nAnswer:\( questions[answerArray[0]] ?? "")\n\n"
     for i in 1...answerArray.count - 1 {
-      questionLabelText += "\(answerArray[i])\n\n"
+      questionLabelText += "\(answerArray[i])\n\nAnswer:\( questions[answerArray[i]] ?? "")\n\n"
     }
     print(questionLabelText)
     questionTextView.text = questionLabelText
