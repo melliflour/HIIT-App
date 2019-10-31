@@ -14,6 +14,8 @@ var answerArray: [String] = []
 
 class StartExerciseViewController: UIViewController {
   
+  @IBOutlet weak var exerciseLabel: UILabel!
+  
   let smallVideoPlayerViewController = AVPlayerViewController()
   
   @IBOutlet weak var videoView: UIView!
@@ -63,7 +65,7 @@ class StartExerciseViewController: UIViewController {
   }
   
   func changeQuestionNumber() {
-    //8 questions shown
+    //4 questions shown
     if questionNumber + 1 >= answerArray.count {
       exerciseView.isHidden = true
       completeWorkout()
@@ -115,7 +117,7 @@ class StartExerciseViewController: UIViewController {
   func createAnswerArray() {
     allAnswerArray = Array(questions.keys)
     allAnswerArray.shuffle()
-    for i in 0...7 {
+    for i in 0...3 {
       answerArray.append(allAnswerArray[i])
     }
     print(answerArray)
@@ -167,10 +169,15 @@ class StartExerciseViewController: UIViewController {
       guard let allItemsInTheBundle = try? myFileManager.contentsOfDirectory(atPath: resourcesPath) else {
           return
     }
-      guard let videoUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_adv_example_hevc/master.m3u8") else {
+    
+    guard let videoUrl = Bundle.main.url(forResource: workout.exercises[questionNumber].url, withExtension: "mov") else {
+      return
+    }
+/*
+      guard let videoUrl = URL(string: workout.exercises[questionNumber].url) else {
           return
       }
-
+*/
       smallVideoPlayerViewController.showsPlaybackControls = false
       smallVideoPlayerViewController.player = AVPlayer(url: videoUrl)
 
@@ -182,8 +189,10 @@ class StartExerciseViewController: UIViewController {
   }
   
   func makeTimerForExercise() {
+    displayExerciseVideo()
     seconds = 10
     updateTimeLabel()
+    exerciseLabel.text = workout.exercises[questionNumber].name
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
       if self.seconds > 0 {
         self.seconds -= 1
@@ -209,6 +218,11 @@ class StartExerciseViewController: UIViewController {
     timeLabel.text = "\(seconds)s"
   }
   
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(animated)
+
+    self.smallVideoPlayerViewController.player?.pause()
+  }
     /*
     // MARK: - Navigation
 

@@ -24,7 +24,7 @@ class DetailsViewController: UIViewController {
   }
   
   @IBAction func playVideo(_ sender: Any) {
-    guard let url = URL(string: "https://www.youtube.com/watch?v=NsO0cmKG9Wo") else {
+    guard let url = URL(string: exercise.url) else {
         return
     }
     // Create an AVPlayer, passing it the HTTP Live Streaming URL.

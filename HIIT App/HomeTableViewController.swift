@@ -11,12 +11,12 @@ import UIKit
 class exerciseClass: Codable {
   var name : String
   var description : String
-  var image : String
+  var url : String
   
-  init(name: String, description: String, image: String) {
+  init(name: String, description: String, url: String) {
     self.name = name
     self.description = description
-    self.image = image
+    self.url = url
   }
 }
 
@@ -34,28 +34,28 @@ class HomeTableViewController: UITableViewController {
   
   var workouts = [
     workoutClass(title: "Workout 1", exercises: [
-      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", image: "Andrea"),
-      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can. Land softly and immediately lower into the next rep.", image: "Andrea"),
-      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. Now jump your feet to the outside of your hands. As you stand up, explode up and jump as high as you can, bringing your arms overhead.", image: "Andrea"),
-      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", image: "Andrea")
+      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", url: "testVideo"),
+      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can. Land softly and immediately lower into the next rep.", url: "testVideo2"),
+      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. Now jump your feet to the outside of your hands. As you stand up, explode up and jump as high as you can, bringing your arms overhead.", url: "Andrea"),
+      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", url: "Andrea")
       ]),
     workoutClass(title: "Workout 2", exercises: [
-      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", image: "Andrea"),
-      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can. Land softly and immediately lower into the next rep.", image: "Andrea"),
-      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. Now jump your feet to the outside of your hands. As you stand up, explode up and jump as high as you can, bringing your arms overhead.", image: "Andrea"),
-      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", image: "Andrea")
+      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", url: "Andrea"),
+      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can. Land softly and immediately lower into the next rep.", url: "Andrea"),
+      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. Now jump your feet to the outside of your hands. As you stand up, explode up and jump as high as you can, bringing your arms overhead.", url: "Andrea"),
+      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", url: "Andrea")
       ]),
     workoutClass(title: "Workout 3", exercises: [
-      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", image: "Andrea"),
-      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can.", image: "Andrea"),
-      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. As you stand up, jump as high as you can, bringing your arms overhead.", image: "Andrea"),
-      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", image: "Andrea")
+      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", url: "Andrea"),
+      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can.", url: "Andrea"),
+      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. As you stand up, jump as high as you can, bringing your arms overhead.", url: "Andrea"),
+      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", url: "Andrea")
       ]),
     workoutClass(title: "Workout 4", exercises: [
-      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", image: "Andrea"),
-      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can.", image: "Andrea"),
-      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. As you stand up, jump as high as you can, bringing your arms overhead.", image: "Andrea"),
-      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", image: "Andrea")
+      exerciseClass(name: "Kicks", description: "Stand with feet hip-distance apart. Kick your left heel to your left glute. Set your foot back down and repeat with your right foot.", url: "Andrea"),
+      exerciseClass(name: "Jump Squats", description: "Stand with your feet slightly wider than hip-distance apart. Bend your knees and sit your butt back, keeping your chest upright. Jump up into the air as high as you can.", url: "Andrea"),
+      exerciseClass(name: "Burpees", description: "Start standing with your feet hip-distance apart and bring your palms to the floor. Jump your feet back so that you are in high plank, keeping your core tight and your hips lifted. Bend your elbows and do 1 push-up. As you stand up, jump as high as you can, bringing your arms overhead.", url: "Andrea"),
+      exerciseClass(name: "Mountain Climbers", description: "Start in high plank and draw your right knee under your torso, keeping the toes off the ground. Return your right foot to starting position. Switch legs and bring your left knee under your chest. Keep switching legs as if you're running in place.", url: "Andrea")
       ])
   ]
   

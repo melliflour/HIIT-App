@@ -16,6 +16,8 @@
 		DC1D05842328ABFC002A8DED /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D05832328ABFC002A8DED /* HomeTableViewController.swift */; };
 		DC1D05862329E4DB002A8DED /* ExercisesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D05852329E4DB002A8DED /* ExercisesTableViewController.swift */; };
 		DC1D05882329F38B002A8DED /* StartExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1D05872329F38B002A8DED /* StartExerciseViewController.swift */; };
+		DCBDA3BE236AC11200EAAC9F /* testVideo.mov in Resources */ = {isa = PBXBuildFile; fileRef = DCBDA3BD236AC11100EAAC9F /* testVideo.mov */; };
+		DCBDA3C0236AC6E800EAAC9F /* testVideo2.mov in Resources */ = {isa = PBXBuildFile; fileRef = DCBDA3BF236AC6E800EAAC9F /* testVideo2.mov */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		DC1D05832328ABFC002A8DED /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		DC1D05852329E4DB002A8DED /* ExercisesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExercisesTableViewController.swift; sourceTree = "<group>"; };
 		DC1D05872329F38B002A8DED /* StartExerciseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartExerciseViewController.swift; sourceTree = "<group>"; };
+		DCBDA3BD236AC11100EAAC9F /* testVideo.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = testVideo.mov; sourceTree = "<group>"; };
+		DCBDA3BF236AC6E800EAAC9F /* testVideo2.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = testVideo2.mov; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +73,8 @@
 				DC1D05872329F38B002A8DED /* StartExerciseViewController.swift */,
 				DC1D05852329E4DB002A8DED /* ExercisesTableViewController.swift */,
 				DC1D05832328ABFC002A8DED /* HomeTableViewController.swift */,
+				DCBDA3BF236AC6E800EAAC9F /* testVideo2.mov */,
+				DCBDA3BD236AC11100EAAC9F /* testVideo.mov */,
 				DC1D0578232892F5002A8DED /* Assets.xcassets */,
 				DC1D057A232892F5002A8DED /* LaunchScreen.storyboard */,
 				DC1D057D232892F5002A8DED /* Info.plist */,
@@ -134,7 +140,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCBDA3BE236AC11200EAAC9F /* testVideo.mov in Resources */,
 				DC1D057C232892F5002A8DED /* LaunchScreen.storyboard in Resources */,
+				DCBDA3C0236AC6E800EAAC9F /* testVideo2.mov in Resources */,
 				DC1D0579232892F5002A8DED /* Assets.xcassets in Resources */,
 				DC1D0577232892F0002A8DED /* Main.storyboard in Resources */,
 			);

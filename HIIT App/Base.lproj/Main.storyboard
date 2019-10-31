@@ -214,6 +214,7 @@
                         <outlet property="answerView" destination="5WM-uR-Y8I" id="WB5-1b-QIt"/>
                         <outlet property="correctAnswerLabel" destination="VtN-Jn-J7E" id="Faq-gr-Scr"/>
                         <outlet property="correctOrWrongLabel" destination="m9s-xf-3KZ" id="i5h-0G-rYw"/>
+                        <outlet property="exerciseLabel" destination="ruE-K3-x10" id="VpT-PR-2Kf"/>
                         <outlet property="exerciseView" destination="ZU2-AA-jRt" id="3j1-pH-v0l"/>
                         <outlet property="questionLabel" destination="KVK-fP-hzt" id="UNh-vk-RBK"/>
                         <outlet property="questionView" destination="UKk-2g-jS6" id="9KE-ad-EeC"/>
