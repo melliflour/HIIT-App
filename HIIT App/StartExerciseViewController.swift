@@ -10,6 +10,7 @@ import UIKit
 
 class StartExerciseViewController: UIViewController {
   
+  var allAnswerArray: [String] = []
   var answerArray: [String] = []
   
   var option = ""
@@ -35,6 +36,8 @@ class StartExerciseViewController: UIViewController {
   }
   
   func submitAnswer() {
+    self.questionView.isHidden = true
+    self.exerciseView.isHidden = true
     self.answerView.isHidden = false
     if option == questions[answerArray[questionNumber]] {
       correctOrWrongLabel.text = "Correct answer!"
@@ -53,7 +56,9 @@ class StartExerciseViewController: UIViewController {
   }
   
   func changeQuestionNumber() {
+    //8 questions shown
     if questionNumber + 1 >= answerArray.count {
+      exerciseView.isHidden = true
       completeWorkout()
     } else {
       questionNumber = questionNumber + 1
@@ -80,7 +85,6 @@ class StartExerciseViewController: UIViewController {
   "What is the medical term for long-sightedness? \n a. Hypotonia \n b. Hyperopia \n c. Amnesia \n d.insomnia": "b",
   "What is the collective noun for a group of owls? \n a. Parliament \n b. Murder \n c. Pack \n d. Flock": "a",
   "(0, 1, 2, 4, 6, 9, 12, 16, ?......) What number should replace the question mark? /n a. 18 \n b. 19 \n c. 20 \n d. 24": "c",
-  "9678, 4572, 5261, 5133... Which one is an odd one out? \n a. 3527 \n b. 6895 \n c. 7768 \n d. 9366": "a",
   "Isotherm is to temperature as isobar is to: \n a. Atmosphere \n b. Wind \n c. Latitude \n d. Pressure": "d",
   "Which day comes three days before the day that comes two days after the day that comes two days after the day that comes three days before Wednesday? \n a. Monday \n b. Wednesday \n c. Friday \n d. Saturday":"a",
   "Which two numbers come next in this sequence? \n 38, 24, 62, 12, 74, ? \n a. 86, 48 \n b. 28, 102 \n c. 62, 8 \n d. 11, 120":"b",
@@ -88,11 +92,10 @@ class StartExerciseViewController: UIViewController {
   "You have 120 cubic blocks. What is the minimum number that needs to be taken away in order to construct a solid cube with none left over? \n a. 5 \n b. 49 \n c. 56 \n d. 45":"c",
   "5862 is to 714, 3498 is to 1113, and 9516 is to 156. Therefore 8257 is to? \n a. 789 \n b. 527 \n c. 157 \n d. 169":"c",
   "926 is to 24, 799 is to 72 and 542 is to 22, so 956 is to? \n a. 48 \n b. 51 \n c. 90 \n d. 78":"b",
-  "Fear of long words is? \n a. Hippopotomonstrosesquippedaliophobia \n b. Xenophobia \n c. Aphenphosmphobia \n d. Pteromerhanophobia":"a",
   "You are sitting in a motionless car, which is tightly sealed. A helium balloon on a string is tied to the floor. If you start accelerating the car, the balloon is going to \n a. Move forward \n b. Move backward \n c. Move downwards \n d. Stay in place":"a",
   "Four years ago, Meg put a nail on a tree in order to mark her height. If the tree grows 50cm per year, and currently the nail is 70cm lower than Meg, how much has Meg grown over these four years? \n a. 270 \n b. 120 \n c. 70 \n d. 130":"c",
   "What day follows the day before yesterday if two days from now will be Sunday? \n a. Wednesday \n b. Thursday \n c. Friday \n d. Saturday":"a",
-  "If A = 250 percent of B, what percent of A is B? \n a. 1/250 percent \n b. 50 percent \n c. 40 percent \n d. 125 percent":"c",
+  "If A = 250 percent of B, B = ? percent of A \n a. 1/250 \n b. 50 \n c. 40 \n d. 125":"c",
   "What is the next number in the following sequence: 0 0 1 22 4 3 6 4 8 5 ? \n a. 6 \n b. 8 \n c. 10 \n d. 12":"c",
   "If everyone working at a car wash works at the same speed, and eight people can wash 50 cars in 60 hours, then four people can wash 100 cars in how many hours? \n a. 30 \n b. 60 \n c. 120 \n d. 240":"",
   "Peter is taller than Nancy and Dan is shorter than Peter. Which of the following can be proved true: \n a. Dan is taller than Nancy. \n b. Dan is shorter than Nancy. \n c. Dan is as tall as Nancy. \n d. None of the above can be proved true.":"d",
@@ -104,8 +107,11 @@ class StartExerciseViewController: UIViewController {
   @IBOutlet weak var questionLabel: UILabel!
   
   func createAnswerArray() {
-    answerArray = Array(questions.keys)
-    answerArray.shuffle()
+    allAnswerArray = Array(questions.keys)
+    allAnswerArray.shuffle()
+    for i in 0...7 {
+      answerArray.append(allAnswerArray[i])
+    }
     print(answerArray)
   }
   
@@ -132,14 +138,14 @@ class StartExerciseViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    exerciseView.isHidden = false
+    questionView.isHidden = true
+    answerView.isHidden = true
     title = workout.title
     createAnswerArray()
   }
     
   override func viewDidAppear(_ animated: Bool) {
-    exerciseView.isHidden = false
-    questionView.isHidden = true
-    answerView.isHidden = true
     changeQuestion()
     
     updateTimeLabel()
@@ -158,7 +164,6 @@ class StartExerciseViewController: UIViewController {
         self.exerciseView.isHidden = true
         self.changeQuestion()
         self.questionView.isHidden = false
-        //self.makeTimerForQuestion()
       }
     }
   }
