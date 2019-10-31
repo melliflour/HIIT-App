@@ -175,12 +175,20 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dxc-nU-IZB" userLabel="Video View">
+                                        <rect key="frame" x="8" y="178" width="398" height="536"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstItem="ruE-K3-x10" firstAttribute="top" secondItem="ZU2-AA-jRt" secondAttribute="top" constant="8" id="7c6-sQ-3TL"/>
+                                    <constraint firstAttribute="bottom" secondItem="Dxc-nU-IZB" secondAttribute="bottom" constant="8" id="J0F-q8-R3c"/>
                                     <constraint firstItem="hyw-ft-9Vh" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="Osp-tF-oLD"/>
+                                    <constraint firstAttribute="trailing" secondItem="Dxc-nU-IZB" secondAttribute="trailing" constant="8" id="Rfv-Cf-9pI"/>
+                                    <constraint firstItem="Dxc-nU-IZB" firstAttribute="leading" secondItem="ZU2-AA-jRt" secondAttribute="leading" constant="8" id="UJ6-21-fpJ"/>
                                     <constraint firstItem="hyw-ft-9Vh" firstAttribute="top" secondItem="ruE-K3-x10" secondAttribute="bottom" constant="18" id="mak-Eb-GQQ"/>
+                                    <constraint firstItem="Dxc-nU-IZB" firstAttribute="top" secondItem="hyw-ft-9Vh" secondAttribute="bottom" constant="18" id="q6r-vG-3i2"/>
                                     <constraint firstItem="ruE-K3-x10" firstAttribute="centerX" secondItem="ZU2-AA-jRt" secondAttribute="centerX" id="rbl-ft-CgL"/>
                                 </constraints>
                             </view>
@@ -210,6 +218,7 @@
                         <outlet property="questionLabel" destination="KVK-fP-hzt" id="UNh-vk-RBK"/>
                         <outlet property="questionView" destination="UKk-2g-jS6" id="9KE-ad-EeC"/>
                         <outlet property="timeLabel" destination="hyw-ft-9Vh" id="Q0c-21-4fb"/>
+                        <outlet property="videoView" destination="Dxc-nU-IZB" id="b0k-hZ-jcQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFD-Kf-NHV" userLabel="First Responder" sceneMemberID="firstResponder"/>

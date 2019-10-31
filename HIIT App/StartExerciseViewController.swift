@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import AVKit
+import AVFoundation
 
 var answerArray: [String] = []
 
 class StartExerciseViewController: UIViewController {
+  
+  let smallVideoPlayerViewController = AVPlayerViewController()
+  
+  @IBOutlet weak var videoView: UIView!
   
   var allAnswerArray: [String] = []
   
@@ -150,10 +156,33 @@ class StartExerciseViewController: UIViewController {
     
     updateTimeLabel()
     makeTimerForExercise()
+    displayExerciseVideo()
+  }
+  
+  func displayExerciseVideo() {
+    let myFileManager = FileManager.default
+      let mainBundle = Bundle.main
+      let resourcesPath = mainBundle.resourcePath!
+
+      guard let allItemsInTheBundle = try? myFileManager.contentsOfDirectory(atPath: resourcesPath) else {
+          return
+    }
+      guard let videoUrl = URL(string: "https://devstreaming-cdn.apple.com/videos/streaming/examples/bipbop_adv_example_hevc/master.m3u8") else {
+          return
+      }
+
+      smallVideoPlayerViewController.showsPlaybackControls = false
+      smallVideoPlayerViewController.player = AVPlayer(url: videoUrl)
+
+      videoView.addSubview(smallVideoPlayerViewController.view)
+
+      smallVideoPlayerViewController.view.frame = videoView.bounds
+
+      smallVideoPlayerViewController.player?.play()
   }
   
   func makeTimerForExercise() {
-    seconds = 3
+    seconds = 10
     updateTimeLabel()
     Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { (timer) in
       if self.seconds > 0 {
@@ -164,6 +193,8 @@ class StartExerciseViewController: UIViewController {
         self.exerciseView.isHidden = true
         self.changeQuestion()
         self.questionView.isHidden = false
+        
+        self.smallVideoPlayerViewController.player?.pause()
       }
     }
   }
