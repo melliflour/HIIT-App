@@ -219,7 +219,7 @@
         <!--Finish View Controller-->
         <scene sceneID="36V-2y-mCT">
             <objects>
-                <viewController storyboardIdentifier="finishVC" id="qdW-aP-6N0" customClass="FinishViewController" customModule="HIIT_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="finishVC" automaticallyAdjustsScrollViewInsets="NO" id="qdW-aP-6N0" customClass="FinishViewController" customModule="HIIT_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7iz-Ns-R7F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -245,6 +245,9 @@
                                         <rect key="frame" x="39" y="246" width="146" height="42"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <state key="normal" title="Questions"/>
+                                        <connections>
+                                            <action selector="showQuestions:" destination="qdW-aP-6N0" eventType="touchUpInside" id="2nb-Xc-W41"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -260,24 +263,44 @@
                                     <constraint firstItem="V3U-bk-iT8" firstAttribute="top" secondItem="z6d-82-wgJ" secondAttribute="top" constant="2" id="omz-7e-yPm"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wRM-GN-PUD" userLabel="Show Q View">
-                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Wg-Jl-07K">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                            </view>
+                                <mutableString key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Regular" family="Avenir Next Condensed" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Occ-tq-VYS">
+                                <rect key="frame" x="162" y="820" width="90" height="42"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeQuestionView:" destination="qdW-aP-6N0" eventType="touchUpInside" id="NcL-HC-NpD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="Occ-tq-VYS" firstAttribute="bottom" secondItem="A4J-gV-qTK" secondAttribute="bottom" id="1xY-nT-YUL"/>
+                            <constraint firstItem="A4J-gV-qTK" firstAttribute="trailing" secondItem="Occ-tq-VYS" secondAttribute="trailing" constant="162" id="33k-ax-Fv1"/>
+                            <constraint firstItem="5Wg-Jl-07K" firstAttribute="top" secondItem="A4J-gV-qTK" secondAttribute="top" id="5DA-6r-gma"/>
                             <constraint firstItem="z6d-82-wgJ" firstAttribute="top" secondItem="A4J-gV-qTK" secondAttribute="top" constant="250" id="GwS-LT-TXT"/>
                             <constraint firstItem="z6d-82-wgJ" firstAttribute="centerY" secondItem="7iz-Ns-R7F" secondAttribute="centerY" id="RQ8-NQ-tdV"/>
-                            <constraint firstItem="wRM-GN-PUD" firstAttribute="trailing" secondItem="A4J-gV-qTK" secondAttribute="trailing" id="m3F-eE-RmV"/>
-                            <constraint firstItem="wRM-GN-PUD" firstAttribute="leading" secondItem="A4J-gV-qTK" secondAttribute="leading" id="oSx-M4-8ZZ"/>
-                            <constraint firstItem="wRM-GN-PUD" firstAttribute="top" secondItem="A4J-gV-qTK" secondAttribute="top" id="ol9-5F-ZBh"/>
+                            <constraint firstItem="Occ-tq-VYS" firstAttribute="leading" secondItem="A4J-gV-qTK" secondAttribute="leading" constant="162" id="UDw-PW-GGm"/>
+                            <constraint firstItem="5Wg-Jl-07K" firstAttribute="trailing" secondItem="A4J-gV-qTK" secondAttribute="trailing" id="Z9D-CJ-Fbv"/>
+                            <constraint firstItem="Occ-tq-VYS" firstAttribute="top" secondItem="5Wg-Jl-07K" secondAttribute="bottom" constant="8" id="hnf-Hd-LZA"/>
+                            <constraint firstItem="5Wg-Jl-07K" firstAttribute="leading" secondItem="A4J-gV-qTK" secondAttribute="leading" id="kZ8-nE-I8n"/>
                             <constraint firstItem="z6d-82-wgJ" firstAttribute="leading" secondItem="A4J-gV-qTK" secondAttribute="leading" constant="95" id="sTV-Nx-Igj"/>
                             <constraint firstItem="z6d-82-wgJ" firstAttribute="centerX" secondItem="7iz-Ns-R7F" secondAttribute="centerX" id="uUj-Kg-RKN"/>
-                            <constraint firstItem="wRM-GN-PUD" firstAttribute="bottom" secondItem="A4J-gV-qTK" secondAttribute="bottom" id="xl5-GW-fRB"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="A4J-gV-qTK"/>
                     </view>
+                    <connections>
+                        <outlet property="closeButton" destination="Occ-tq-VYS" id="hZ1-Px-JLw"/>
+                        <outlet property="questionTextView" destination="5Wg-Jl-07K" id="Q7z-Yf-GVB"/>
+                        <outlet property="returnView" destination="z6d-82-wgJ" id="pae-tK-HJV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fxq-xX-LpL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

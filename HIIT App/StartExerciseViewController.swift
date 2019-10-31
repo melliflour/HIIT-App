@@ -8,10 +8,11 @@
 
 import UIKit
 
+var answerArray: [String] = []
+
 class StartExerciseViewController: UIViewController {
   
   var allAnswerArray: [String] = []
-  var answerArray: [String] = []
   
   var option = ""
     
@@ -84,7 +85,7 @@ class StartExerciseViewController: UIViewController {
   "Which country developed emojis? \n a. Japan \n b. USA \n c. Germany \n d. South Korea": "a",
   "What is the medical term for long-sightedness? \n a. Hypotonia \n b. Hyperopia \n c. Amnesia \n d.insomnia": "b",
   "What is the collective noun for a group of owls? \n a. Parliament \n b. Murder \n c. Pack \n d. Flock": "a",
-  "(0, 1, 2, 4, 6, 9, 12, 16, ?......) What number should replace the question mark? /n a. 18 \n b. 19 \n c. 20 \n d. 24": "c",
+  "(0, 1, 2, 4, 6, 9, 12, 16, ?......) What number should replace the question mark? \n a. 18 \n b. 19 \n c. 20 \n d. 24": "c",
   "Isotherm is to temperature as isobar is to: \n a. Atmosphere \n b. Wind \n c. Latitude \n d. Pressure": "d",
   "Which day comes three days before the day that comes two days after the day that comes two days after the day that comes three days before Wednesday? \n a. Monday \n b. Wednesday \n c. Friday \n d. Saturday":"a",
   "Which two numbers come next in this sequence? \n 38, 24, 62, 12, 74, ? \n a. 86, 48 \n b. 28, 102 \n c. 62, 8 \n d. 11, 120":"b",
@@ -97,12 +98,11 @@ class StartExerciseViewController: UIViewController {
   "What day follows the day before yesterday if two days from now will be Sunday? \n a. Wednesday \n b. Thursday \n c. Friday \n d. Saturday":"a",
   "If A = 250 percent of B, B = ? percent of A \n a. 1/250 \n b. 50 \n c. 40 \n d. 125":"c",
   "What is the next number in the following sequence: 0 0 1 22 4 3 6 4 8 5 ? \n a. 6 \n b. 8 \n c. 10 \n d. 12":"c",
-  "If everyone working at a car wash works at the same speed, and eight people can wash 50 cars in 60 hours, then four people can wash 100 cars in how many hours? \n a. 30 \n b. 60 \n c. 120 \n d. 240":"",
   "Peter is taller than Nancy and Dan is shorter than Peter. Which of the following can be proved true: \n a. Dan is taller than Nancy. \n b. Dan is shorter than Nancy. \n c. Dan is as tall as Nancy. \n d. None of the above can be proved true.":"d",
   "Together Harry and Sam caught 32 fish. Harry caught three times as many fish as Sam. How many fish did Harry catch? \n a. 6 \n b. 8 \n c. 16 \n d. 24":"d",
   "If a+b = 7 and ab = 4,then find the value of (a×a) + (b×b). \n a. 50 \n b. 41 \n c. 46 \n d. 69":"b",
   "The difference between the greatest and smallest two-digit even integers that are exactly divisible by 4 is: \n a. 82 \n b. 84 \n c.96 \n d. 88":"b",
-  "On a street there are 25 houses—10 of the houses have fewer than six rooms, 10 of the houses have more than seven rooms, and 4 houses have more than eight rooms. What is the total number of houses that are either six, seven, or eight rooms? \n a. 5 \n b. 9 \n c. 11 \n d. 14":"c"]
+  ]
   
   @IBOutlet weak var questionLabel: UILabel!
   
