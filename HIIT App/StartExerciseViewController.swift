@@ -105,7 +105,7 @@ class StartExerciseViewController: UIViewController {
   
   func changeQuestionNumber() {
     //4 questions shown
-    if questionNumber >= answerArray.count {
+    if questionNumber + 1 >= answerArray.count {
       exerciseView.isHidden = true
       completeWorkout()
     } else {
@@ -121,7 +121,7 @@ class StartExerciseViewController: UIViewController {
   func createAnswerArray() {
     allAnswerArray = Array(questions.keys)
     allAnswerArray.shuffle()
-    for i in 0...4 {
+    for i in 0...3 {
       answerArray.append(allAnswerArray[i])
     }
     print(answerArray)
