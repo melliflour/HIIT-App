@@ -105,7 +105,7 @@ class StartExerciseViewController: UIViewController {
   
   func changeQuestionNumber() {
     //4 questions shown
-    if questionNumber + 1 >= answerArray.count {
+    if questionNumber >= answerArray.count {
       exerciseView.isHidden = true
       completeWorkout()
     } else {
@@ -170,14 +170,10 @@ class StartExerciseViewController: UIViewController {
           return
     }
     
-    guard let videoUrl = Bundle.main.url(forResource: workout.exercises[questionNumber - 1].url, withExtension: "mov") else {
+    guard let videoUrl = Bundle.main.url(forResource: workout.exercises[questionNumber].url, withExtension: "mov") else {
       return
     }
-/*
-      guard let videoUrl = URL(string: workout.exercises[questionNumber].url) else {
-          return
-      }
-*/
+
       smallVideoPlayerViewController.showsPlaybackControls = false
       smallVideoPlayerViewController.player = AVPlayer(url: videoUrl)
 
